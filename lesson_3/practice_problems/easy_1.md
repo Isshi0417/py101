@@ -123,3 +123,10 @@ How can we add multiple items to our list (e.g., `‘Dino’` and `‘Hoppy’`)
 flintstones.extend(["Dino", "Hoppy"])
 ```
 
+### Question 9
+
+Print a new version of the sentence given by `advice` that ends just before the word `house`. Don’t worry about spaces or punctuation: remove everything starting from the beginning of `house` to the end of the sentence.
+
+```python
+```
+

@@ -96,3 +96,14 @@ print("Dino" in str1)	# False
 print("Dino" in str2)	# True
 ```
 
+### Question 7
+
+How can we add the family pet, `“Dino”` to the following list?
+
+```python
+flintstones = ["Fred", "Barney", "Wilma", "Betty", "Bambam", "Pebbles"]
+
+# An element can be appended by using append()
+flintstones.append("Dino")
+```
+

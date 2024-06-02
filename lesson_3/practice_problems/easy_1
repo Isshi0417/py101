@@ -54,3 +54,32 @@ print(munsters_description.capitalize())
 # => 'The munsters are creepy and spooky.'
 ```
 
+### Question 5
+
+Starting with the string:
+
+```python
+munsters_description = "The Munsters are creepy and spooky."
+```
+
+print the string with the case of all letters swapped:
+
+```python
+"tHE mUNSTERS ARE CREEPY AND SPOOKY."
+```
+
+That is, lowercase letters are converted to uppercase, and uppercase letters are converted to lowercase.
+
+```python
+munsters_description = "The Munsters are creepy and spooky."
+
+for character in munsters_description:
+    if character.islower():
+        character = character.upper()
+    else:
+        character = character.lower()
+    
+    print(character, end = "")
+    # => tHE mUNSTERS ARE CREEPY AND SPOOKY.
+```
+

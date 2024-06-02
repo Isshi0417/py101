@@ -132,5 +132,18 @@ advice = "Few things in life are as important as house training your pet dinosau
 
 # String slicing can be used to get the result
 print(advice[:advice.index("house")])
+# => Few things in life are as important as
+```
+
+### Question 10
+
+Print the following string with the word `important` replaced by `urgent`:
+
+```python
+advice = "Few things in life are as important as house training your pet dinosaur."
+
+# replace() can be used to replace sub-strings
+print(advice.replace("important", "urgent"))
+# => Few things in life are as urgent as house training your pet dinosaur.
 ```
 

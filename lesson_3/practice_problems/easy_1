@@ -1,0 +1,12 @@
+# Practice Problems: Easy 1
+
+### Question 1
+
+Will the code below raise an error?
+
+```python
+numbers = [1, 2, 3]
+numbers[6] = 5
+```
+
+The code will raise an `IndexError` because `numbers` only has an index value of 2. The error will be caught when trying to access an non-existent out of bounds element.

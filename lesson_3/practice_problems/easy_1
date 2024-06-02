@@ -42,3 +42,15 @@ new_string = "Four score and " + famous_words
 new_string = f"Four score and {famous_words}"
 ```
 
+### Question 4
+
+Using the following string, print a string that contains the same value, but using all lowercase letters except for the first character, which should be capitalized.
+
+```python
+munsters_description = "the Munsters are CREEPY and Spooky."
+
+# capitalize() can be used to capitalize the first character
+print(munsters_description.capitalize())
+# => 'The munsters are creepy and spooky.'
+```
+

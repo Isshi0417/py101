@@ -163,3 +163,15 @@ def is_dot_separated_ip_address(input_string):
     return True
 ```
 
+### Question 5
+
+What do you expect to happen when the `greeting` variable is referenced in the last line of the code below?
+
+```python
+if False:
+    greeting = "hello world"
+
+print(greeting)
+```
+
+The code will print out an error because `greeting` is never initialized. Due to the `False` condition, the `if` block is never executed.

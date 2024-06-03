@@ -85,3 +85,29 @@ print(0.3 + 0.6 == 0.9)
 ```
 
 The first line prints `0.8999` because floating point representations lack minuscule amounts of precision. This means that the calculated value is not truly equal to `0.9`, which is why the second line prints `False`. 
+
+### Question 5
+
+*What do you think the following code will output?*
+
+```python
+nan_value = float("nan")
+
+print(nan_value == float("nan"))
+```
+
+The code will output `False` because `nan` refers to data type that is not a number. In Python, `==` operator can’t be used to check if a value is `nan`.
+
+***Bonus Question***
+
+*How can you reliably test if a value is `nan`*?
+
+You can use `math.isnan()` to check for these values.
+
+```python
+import math
+
+nan_value = float("nan")
+print(math.isnan(nan_value))	# True
+```
+

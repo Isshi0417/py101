@@ -157,3 +157,25 @@ mess_with_demographics(munsters)
 
 The family data is ruined because dictionaries are mutable in Python, and the original data is lost because the changes were not reassigned to a new variable. It instead modifies the original object instance of the `munsters` data.
 
+### Question 8
+
+*Function and method calls can take expressions as arguments. Suppose we define a function named `rps` as follows, which follows the classic rules of the rock-paper-scissors game, but with a slight twist: in the event of a tie, it just returns the choice made by both players.*
+
+```python
+def rps(fist1, fist2):
+    if fist1 == "rock":
+        return "paper" if fist2 == "paper" else "rock"
+    elif fist1 == "paper":
+        return "scissors" if fist2 == "scissors" else "paper"
+    else:
+        return "rock" if fist2 == "rock" else "scissors"
+```
+
+*What does the following code output?*
+
+```python
+print(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"))
+```
+
+The code prints out `paper`. This is because the first two invocations (nested in the deepest call) returns `paper` and `rock` respectively. The second invocation compares these two, which returns `paper`. Finally, the last invocation compares `paper` with `rock`, which — again — returns `paper`.
+

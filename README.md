@@ -6,4 +6,3 @@ This section of the textbook covers the most baseline fundamentals of Python cod
 >
 > All the projects have been pushed to GitHub as independent projects before due to my misunderstanding of how the projects should be pushed. Those repositories are not deleted so the change history can be tracked. In this repository, all the .git files are removed, meaning there are no nested git repositories.
 
-## Projects

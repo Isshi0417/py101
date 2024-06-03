@@ -53,3 +53,30 @@ print(my_list1)
 ```
 
 The code will output `[{'first': 42}, {'second': 'value2'}, 3, 4, 5]` because a shallow copy only duplicates the outermost instance. This means that while there are two lists, both of them point towards the same object instance. Any changed made to a shallow copy (where the data type is mutable) will also affect the original. To avoid this, deep copies can be made so the two lists reference different object instances.
+
+### Question 5
+
+The following function unnecessarily uses two `return` statements to return boolean values. Can you rewrite this function so it only has one `return` statement and does not explicitly use either `True` or `False`?
+
+```python
+def is_color_valid(color):
+    if color == "blue" or color == "green":
+        return True
+    else:
+        return False
+    
+# Simple '==' operators can replace if statement
+def is_color_valid(color):
+    return color == "blue" or color == "green"
+
+print(is_color_valid("green"))	# True
+print(is_color_valid("red"))	# False
+
+# 'in' operators can also check for conditions
+def is_color_valid(color):
+    return color in ("blue", "green")
+
+print(is_color_valid("blue"))	# True
+print(is_color_valid("red"))	# False
+```
+

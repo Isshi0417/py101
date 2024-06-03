@@ -40,3 +40,16 @@ print(str1)
 ```
 
 The code will output `hello there`. This is because the value of `str1` is never modified and only `str2` goes through reassignment. 
+
+### Question 4
+
+What will the following code output?
+
+```python
+my_list1 = [{"first": "value1"}, {"second": "value2"}, 3, 4, 5]
+my_list2 = my_list1.copy()
+my_list2[0]['first'] = 42
+print(my_list1)
+```
+
+The code will output `[{'first': 42}, {'second': 'value2'}, 3, 4, 5]` because a shallow copy only duplicates the outermost instance. This means that while there are two lists, both of them point towards the same object instance. Any changed made to a shallow copy (where the data type is mutable) will also affect the original. To avoid this, deep copies can be made so the two lists reference different object instances.

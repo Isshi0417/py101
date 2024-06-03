@@ -69,3 +69,19 @@ print(type(numbers) is list)	# True
 print(type(table) is list)		# False
 ```
 
+### Question 6
+
+Back in the stone age (before CSS), we used spaces to align things on the screen. If we have a 40-character wide table of Flintstone family members, how can we center the following title above the table with spaces?
+
+```python
+title = "Flintstone Family Members"
+limit = 40
+
+# The amount of spaces can be calculated by dividing by half
+spaces = int((limit - len(title)) / 2)
+print((" " * spaces) + title)
+print("_" * 40)
+#        Flintstone Family Members
+# ________________________________________
+```
+

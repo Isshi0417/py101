@@ -49,9 +49,23 @@ print(10 < 101 <= 100)	# False
 Given a list of numbers `[1, 2, 3, 4, 5]`, mutate the list by removing the number at index `1`, so that the list becomes `[1, 2, 4, 5]`.
 
 ```python
-# pop() can be used to achieve this
 list = [1, 2, 3, 4, 5]
+
+# pop() can be used to achieve this
 list.pop(2)
 print(list)	# [1, 2, 4, 5]
+```
+
+### Question 5
+
+How would you verify whether the data structures assigned to the variables `numbers` and `table` are of type `list`?
+
+```python
+numbers = [1, 2, 3, 4]
+table = {'field1': 1, 'field2': 2, 'field3': 3, 'field4': 4}
+
+# type() and 'is' operator can be combined to check data type
+print(type(numbers) is list)	# True
+print(type(table) is list)		# False
 ```
 

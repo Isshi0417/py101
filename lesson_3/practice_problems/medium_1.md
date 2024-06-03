@@ -50,3 +50,28 @@ By doing this, the function doesn’t trigger the while loop and returns the `re
 ***Bonus Question**: What is the purpose of `number % divisor == 0` in that code?*
 
 The expression checks if the `number` can be divided without remainders by the `divisor`. If there are no remainders, that means the `divisor` is a factor.
+
+### Question 3
+
+*Alyssa was asked to write an implementation of a rolling buffer. You can add and remove elements from a rolling buffer. However, once the buffer becomes full, any new elements will displace the oldest elements in the buffer.*
+
+*She wrote two implementations of the code for adding elements to the buffer:*
+
+```python
+def add_to_rolling_buffer1(buffer, max_buffer_size, new_element):
+    buffer.append(new_element)
+    if len(buffer) > max_buffer_size:
+        buffer.pop(0)
+    return buffer
+
+def add_to_rolling_buffer2(buffer, max_buffer_size, new_element):
+    buffer = buffer + [new_element]
+    if len(buffer) > max_buffer_size:
+        buffer.pop(0)
+    return buffer
+```
+
+*Is there a difference between these implementations, other than the way she is adding an element to the buffer?*
+
+Yes because the first function mutates `buffer` while the second one creates a new list and assigns it to `buffer`, which is the value getting returned at the end of the function.
+

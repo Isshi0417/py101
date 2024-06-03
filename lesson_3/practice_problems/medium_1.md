@@ -127,3 +127,33 @@ print(answer - 8)
 ```
 
 The code will output `34`. This is because the value returned by the function is assigned to `new_answer` but `print` uses `answer`, which was used as the initial argument.
+
+### Question 7
+
+*One day, Spot was playing with the Munster family’s home computer, and he wrote a small program to mess with their demographic data:*
+
+```python
+munsters = {
+    "Herman": {"age": 32, "gender": "male"},
+    "Lily": {"age": 30, "gender": "female"},
+    "Grandpa": {"age": 402, "gender": "male"},
+    "Eddie": {"age": 10, "gender": "male"},
+    "Marilyn": {"age": 23, "gender": "female"},
+}
+
+def mess_with_demographics(demo_dict):
+    for key, value in demo_dict.items():
+        value["age"] += 42
+        value["gender"] = "other"
+```
+
+*After writing this function, he typed the following code:*
+
+```python
+mess_with_demographics(munsters)
+```
+
+*Before Grandpa could stop him,  Spot hit the enter key with his tail. Did the family’s data get ransacked? Why or why not?*
+
+The family data is ruined because dictionaries are mutable in Python, and the original data is lost because the changes were not reassigned to a new variable. It instead modifies the original object instance of the `munsters` data.
+

@@ -75,3 +75,13 @@ def add_to_rolling_buffer2(buffer, max_buffer_size, new_element):
 
 Yes because the first function mutates `buffer` while the second one creates a new list and assigns it to `buffer`, which is the value getting returned at the end of the function.
 
+### Question 4
+
+*What will the following two lines of code output?*
+
+```python
+print(0.3 + 0.6)
+print(0.3 + 0.6 == 0.9)
+```
+
+The first line prints `0.8999` because floating point representations lack minuscule amounts of precision. This means that the calculated value is not truly equal to `0.9`, which is why the second line prints `False`. 

@@ -179,3 +179,23 @@ print(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"))
 
 The code prints out `paper`. This is because the first two invocations (nested in the deepest call) returns `paper` and `rock` respectively. The second invocation compares these two, which returns `paper`. Finally, the last invocation compares `paper` with `rock`, which — again — returns `paper`.
 
+### Question 9
+
+*Consider these two simple functions:*
+
+```python
+def foo(param="no"):
+    return "yes"
+
+def bar(param="no"):
+    return param == "no" and foo() or "no"
+```
+
+*What will the following function invocation return?*
+
+```python
+bar(foo())
+```
+
+The invocation will return `no`. `foo()` initially returns `yes`, which is passed as the argument in `bar()`. The `==` operator returns `False` after evaluating the statement. It skips over `foo` because it is part of the evaluation that involves the `==` operator. Since `no` is a truthy, the `or` operator will return `no` when compared with `param == “no”`.
+

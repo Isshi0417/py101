@@ -199,3 +199,18 @@ bar(foo())
 
 The invocation will return `no`. `foo()` initially returns `yes`, which is passed as the argument in `bar()`. The `==` operator returns `False` after evaluating the statement. It skips over `foo` because it is part of the evaluation that involves the `==` operator. Since `no` is a truthy, the `or` operator will return `no` when compared with `param == “no”`.
 
+### Question 10
+
+*In Python, every object has a unique identifier that can be accessed using the `id()` function. This function returns the identity of an object which is guaranteed to be unique for the object’s lifetime. For certain basic immutable data types like short strings or integers, Python might reuse the memory address for objects with the same value. This is known as “interning”.*
+
+*Given the following code, predict the output:*
+
+```python
+a = 42
+b = 42
+c = a
+
+print(id(a) == id(b) == id(c))
+```
+
+The code will return true. In this case, Python uses the same memory as `a` and `b` because `42` is an integer (which is immutable), and it shares the same value.

@@ -111,3 +111,19 @@ nan_value = float("nan")
 print(math.isnan(nan_value))	# True
 ```
 
+### Question 6
+
+*What is the output of the following code?*
+
+```python
+answer = 42
+
+def mess_with_it(some_number):
+    return some_number + 8
+
+new_answer = mess_with_it(answer)
+
+print(answer - 8)
+```
+
+The code will output `34`. This is because the value returned by the function is assigned to `new_answer` but `print` uses `answer`, which was used as the initial argument.

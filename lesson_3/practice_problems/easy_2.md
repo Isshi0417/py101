@@ -98,3 +98,14 @@ print(statement1.count("t"))	# 2
 print(statement2.count("t"))	# 0
 ```
 
+### Question 8
+
+Determine whether the following dictionary of people and their age contains an entry for ‘Spot’:
+
+```python
+ages = {'Herman': 32, 'Lily': 30, 'Grandpa': 402, 'Eddie': 10}
+
+# 'in' operator can be used
+print("Spot" in ages)	# False
+```
+

@@ -18,3 +18,12 @@ while numbers:
 print(numbers)	# []
 ```
 
+### Question 2
+
+What will the following code output?
+
+```python
+print([1, 2, 3] + [4, 5])
+```
+
+The code will output `[1, 2, 3, 4, 5]` because lists can be concatenated in Python.

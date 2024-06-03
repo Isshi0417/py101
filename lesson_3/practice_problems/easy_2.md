@@ -44,3 +44,14 @@ print(10 < 100 <= 100)	# True
 print(10 < 101 <= 100)	# False
 ```
 
+### Question 4
+
+Given a list of numbers `[1, 2, 3, 4, 5]`, mutate the list by removing the number at index `1`, so that the list becomes `[1, 2, 4, 5]`.
+
+```python
+# pop() can be used to achieve this
+list = [1, 2, 3, 4, 5]
+list.pop(2)
+print(list)	# [1, 2, 4, 5]
+```
+
